@@ -90,7 +90,7 @@ const ModelComponents = () => {
   }, []);
 
   return (
-    <div className="screen-max-width" id="root">
+    <div className="screen-max-width">
       <h1 className="section-heading" id="heading">
         Take a closer look.
       </h1>
