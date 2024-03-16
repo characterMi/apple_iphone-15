@@ -62,14 +62,6 @@ export const models = [
   },
 ];
 
-export const sizes: {
-  label: string;
-  value: "small" | "large";
-}[] = [
-  { label: '6.1"', value: "small" },
-  { label: '6.7"', value: "large" },
-];
-
 export const footerLinks = [
   "Privacy Policy",
   "Terms of Use",

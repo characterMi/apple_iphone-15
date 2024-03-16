@@ -20,17 +20,15 @@ type Props = GroupProps & {
     color: string[];
     img: string;
   };
-  size: "small" | "large";
 };
 
-function IPhone({ item, size, ...props }: Props) {
+function IPhone({ item, ...props }: Props) {
   const { nodes, materials }: any = useGLTF("/models/scene.glb");
 
   const texture = useTexture(item.img);
 
   useEffect(() => {
     Object.entries(materials).map((material: any) => {
-      // these are the material names that can't be changed color
       if (
         material[0] !== "zFdeDaGNRwzccye" &&
         material[0] !== "ujsvqBWRMnqdwPx" &&
