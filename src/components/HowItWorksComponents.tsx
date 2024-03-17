@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef } from "react";
 import Image from "next/image";
 
 import { useGSAP } from "@gsap/react";
@@ -10,8 +9,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { animateWithGsapScrollTrigger } from "@/utils/animation";
 
 const HowItWorksComponents = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -52,33 +49,6 @@ const HowItWorksComponents = () => {
 
         <p className="hiw-subtitle">
           It's here. The biggest redesign in the history of Apple GPUs.
-        </p>
-      </div>
-
-      <div className="mt-10 md:mt-20 mb-14">
-        <div className="relative h-full flex-center">
-          <div className="overflow-hidden">
-            <img
-              src="/assets/images/frame.png"
-              alt="Frame"
-              className="bg-transparent relative"
-            />
-          </div>
-          <div className="hiw-video">
-            <video
-              className="pointer-events-none"
-              playsInline
-              preload="none"
-              muted
-              autoPlay
-              ref={videoRef}
-            >
-              <source src="/assets/videos/frame.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-        <p className="text-gray font-semibold text-center mt-3">
-          Honkai: Star Rail
         </p>
       </div>
 

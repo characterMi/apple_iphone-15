@@ -31,7 +31,7 @@ const Footer = () => {
             reserved.
           </p>
 
-          <div className="flex gap-1">
+          <div className="flex gap-1 flex-wrap">
             {footerLinks.map((link, i) => (
               <div className="text-gray flex items-center gap-1" key={link}>
                 <p className="font-semibold cursor-pointer hover:text-white transition-all text-xs">
