@@ -10,7 +10,7 @@ const HeroComponents = () => {
   const [videoSrc, setVideoSrc] = useState<string | null>(null);
 
   const handleVideoSrcSet = () => {
-    if (window.innerWidth < 760) {
+    if (window.innerWidth < 700) {
       setVideoSrc("/assets/videos/smallHero.mp4");
     } else {
       setVideoSrc("/assets/videos/hero.mp4");
@@ -18,9 +18,7 @@ const HeroComponents = () => {
   };
 
   useEffect(() => {
-    window.innerWidth > 760
-      ? setVideoSrc("/assets/videos/hero.mp4")
-      : setVideoSrc("/assets/videos/smallHero.mp4");
+    handleVideoSrcSet()
 
     window.addEventListener("resize", handleVideoSrcSet);
 

@@ -5,7 +5,10 @@ import ToggleMenu from "./ToggleMenu";
 
 const Navbar = () => {
   return (
-    <nav className="w-full py-5 sm:px-10 px-5 flex justify-between items-center screen-max-width">
+    <nav
+      className="w-full py-5 sm:px-10 backdrop-blur-sm bg-[#0000004b] px-5 flex justify-between items-center screen-max-width top-0 left-0 min-[1120px]:left-1/2 min-[1120px]:-translate-x-1/2"
+      style={{ position: "fixed", zIndex: "100000" }}
+    >
       <Image src="/assets/images/apple.svg" alt="Logo" width={15} height={15} />
       <menu className="flex flex-1 justify-center max-sm:hidden">
         {navLists.map((item) => (

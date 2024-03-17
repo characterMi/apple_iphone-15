@@ -8,9 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import ModelView from "./ModelView";
 import { models } from "@/constants";
-import {
-  animateWithGsapScrollTrigger,
-} from "../utils/animation";
+import { animateWithGsapScrollTrigger } from "../utils/animation";
 
 const ModelComponents = () => {
   const [model, setModel] = useState({
@@ -27,18 +25,12 @@ const ModelComponents = () => {
       opacity: 1,
     });
 
-    animateWithGsapScrollTrigger(
-      ".model_color-btn",
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.1,
-        duration: 0.3,
-      },
-      {
-        start: "top 100%",
-      }
-    );
+    animateWithGsapScrollTrigger(".model_color-btn", {
+      x: 0,
+      opacity: 1,
+      stagger: 0.1,
+      duration: 0.3,
+    });
   }, []);
 
   return (
@@ -49,9 +41,7 @@ const ModelComponents = () => {
 
       <div className="flex flex-col items-center mt-5">
         <div className="w-screen h-[75vh] md:h-[90vh] overflow-hidden relative">
-
           <ModelView item={model} />
-
         </div>
 
         <div className="mx-auto w-full">
@@ -67,7 +57,7 @@ const ModelComponents = () => {
               {models.map((item) => (
                 <li
                   key={item.id}
-                  className="w-6 h-6 mx-2 rounded-full cursor-pointer model_color-btn opacity-0 translate-y-28"
+                  className="w-6 h-6 mx-2 rounded-full cursor-pointer model_color-btn opacity-0 translate-x-28"
                   style={{ backgroundColor: item.color[0] }}
                   onClick={() => setModel(item)}
                 />

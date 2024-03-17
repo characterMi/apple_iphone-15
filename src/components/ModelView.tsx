@@ -23,7 +23,7 @@ const ModelView = ({ item }: Props) => {
       className="h-full w-full overflow-hidden touch-none"
       gl={{ preserveDrawingBuffer: true }}
     >
-      <ambientLight intensity={0.2} />
+      <ambientLight intensity={2} />
 
       <Environment preset="lobby" />
       <OrbitControls
@@ -34,7 +34,7 @@ const ModelView = ({ item }: Props) => {
         target={new THREE.Vector3(0, 0, 0)}
       />
       <Suspense fallback={<Loader />}>
-        <IPhone scale={30} item={item} />
+        <IPhone scale={25} item={item} />
       </Suspense>
     </Canvas>
   );

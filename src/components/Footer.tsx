@@ -31,19 +31,14 @@ const Footer = () => {
             reserved.
           </p>
 
-          <div className="flex items-center gap-1 flex-wrap">
+          <div className="flex gap-1">
             {footerLinks.map((link, i) => (
-              <>
-                <p
-                  key={link}
-                  className="font-semibold cursor-pointer text-gray hover:text-white transition-all text-xs"
-                >
+              <div className="text-gray flex items-center gap-1" key={link}>
+                <p className="font-semibold cursor-pointer hover:text-white transition-all text-xs">
                   {link}
                 </p>
-                <span className="text-gray">
-                  {i !== footerLinks.length - 1 && " | "}
-                </span>
-              </>
+                <span>{i !== footerLinks.length - 1 && " | "}</span>
+              </div>
             ))}
           </div>
         </div>

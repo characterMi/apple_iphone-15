@@ -21,22 +21,21 @@ const HowItWorksComponents = () => {
         start: "20% bottom",
       },
       opacity: 0,
-      scale: 2,
       duration: 2,
       ease: "power2.inOut",
     });
 
     animateWithGsapScrollTrigger(".g_fadeIn", {
-      opacity: 1,
       y: 0,
-      duration: 1,
+      opacity: 1,
       ease: "power2.inOut",
+      duration: 1,
     });
   }, []);
 
   return (
     <>
-      <div id="chip" className="flex-center w-full my-20">
+      <div id="chip" className="flex-center my-20 overflow-hidden w-full">
         <Image
           src="/assets/images/chip.jpeg"
           alt="Chip"
@@ -59,12 +58,10 @@ const HowItWorksComponents = () => {
       <div className="mt-10 md:mt-20 mb-14">
         <div className="relative h-full flex-center">
           <div className="overflow-hidden">
-            <Image
+            <img
               src="/assets/images/frame.png"
               alt="Frame"
-              width={920}
-              height={920}
-              className="bg-transparent relative z-10 w-full"
+              className="bg-transparent relative"
             />
           </div>
           <div className="hiw-video">

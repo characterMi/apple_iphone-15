@@ -1,4 +1,4 @@
-// This component is quite complicated, you must know gsap.
+// This component is quite complicated, you must know gsap to understand it.
 
 "use client";
 
@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { hightlightsSlides } from "@/constants";
 
@@ -30,6 +31,8 @@ const VideoCarousel = () => {
   const [loadedData, setLoadedData] = useState<any[]>([]);
 
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
     // animation for our slider
     gsap.to("#slider", {
       transform: `translateX(${-100 * video.videoId}%)`,
