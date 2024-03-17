@@ -111,6 +111,10 @@ canvas {
     @apply text-gray font-semibold text-xl md:text-2xl py-10 text-center;
   }
 
+  .hiw-video {
+    @apply absolute w-[95%] h-[90%] rounded-[22px] sm:rounded-[26px] md:rounded-[56px] overflow-hidden;
+  }
+
   .hiw-text-container {
     @apply flex md:flex-row flex-col justify-between items-start gap-24;
   }

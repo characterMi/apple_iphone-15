@@ -52,6 +52,32 @@ const HowItWorksComponents = () => {
         </p>
       </div>
 
+      <div className="mt-10 md:mt-20 mb-14">
+        <div className="relative h-full flex-center">
+          <div className="overflow-hidden">
+            <img
+              src="/assets/images/frame.png"
+              alt="Frame"
+              className="bg-transparent relative"
+            />
+          </div>
+          <div className="hiw-video">
+            <video
+              className="pointer-events-none"
+              playsInline
+              preload="none"
+              muted
+              autoPlay
+            >
+              <source src="/assets/videos/frame.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <p className="text-gray font-semibold text-center mt-3">
+          Honkai: Star Rail
+        </p>
+      </div>
+
       <div className="hiw-text-container">
         <div className="flex flex-1 justify-center flex-col">
           <p className="hiw-text g_fadeIn">
