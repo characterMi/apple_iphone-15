@@ -204,3 +204,62 @@ canvas {
     box-shadow: 0.2em -0.2em 0 0 currentcolor;
   }
 }
+
+.circle-animation {
+  animation: circle-animation 500ms alternate infinite;
+}
+
+.circle-animation:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.circle-animation:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+@keyframes circle-animation {
+  0% {
+    top: 35px;
+    height: 4px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+
+  40% {
+    height: 8px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+
+  100% {
+    top: 10px;
+  }
+}
+
+.shadow-animation {
+  animation: shadow-animation 500ms alternate 200ms infinite;
+}
+
+.shadow-animation:first-child {
+  animation-delay: 0ms;
+}
+
+.shadow-animation:last-child {
+  animation-delay: 300ms;
+}
+
+@keyframes shadow-animation {
+  0% {
+    transform: scaleX(1.5);
+  }
+
+  40% {
+    transform: scaleX(1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scaleX(0.7);
+    opacity: 0.4;
+  }
+}
